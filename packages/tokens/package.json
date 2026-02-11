@@ -30,5 +30,8 @@
     "tokens"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@storybook/react": "^10.2.8"
+  }
 }

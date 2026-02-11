@@ -23,7 +23,13 @@ export default defineConfig({
   plugins: [
     dts({
       insertTypesEntry: true,
-      exclude: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      exclude: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+        '**/*.stories.tsx',
+      ],
     }),
     generateCSSPlugin(),
   ],
