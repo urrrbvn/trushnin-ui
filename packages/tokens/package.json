@@ -10,9 +10,9 @@
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./tokens.css": "./dist/tokens.css"
   },
@@ -20,6 +20,9 @@
     "build": "vite build",
     "dev": "vite build --watch",
     "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "clean": "rm -rf dist"
   },
   "keywords": [
