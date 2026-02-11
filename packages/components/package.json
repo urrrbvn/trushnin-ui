@@ -1,0 +1,33 @@
+{
+  "name": "@trushnin-ui/components",
+  "version": "0.1.0",
+  "description": "Styled components for Trushnin UI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@trushnin-ui/tokens": "workspace:*",
+    "@trushnin-ui/theme": "workspace:*",
+    "@trushnin-ui/utils": "workspace:*",
+    "@trushnin-ui/primitives": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "keywords": [
+    "components",
+    "ui"
+  ],
+  "license": "MIT",
+  "private": true
+}

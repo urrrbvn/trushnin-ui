@@ -1,0 +1,23 @@
+{
+  "name": "@trushnin-ui/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for Trushnin UI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "design-tokens",
+    "tokens"
+  ],
+  "license": "MIT",
+  "private": true
+}
