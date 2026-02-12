@@ -136,7 +136,7 @@ The library includes comprehensive testing:
 
 ## 📝 License
 
-MIT © [Your Name]
+MIT © urrrbvn
 
 ## 🤝 Contributing
 
