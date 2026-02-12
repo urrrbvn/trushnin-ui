@@ -1,0 +1,94 @@
+# Source files (only dist should be published)
+src/
+*.ts
+*.tsx
+!*.d.ts
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/__tests__/
+**/__mocks__/
+test/
+tests/
+
+# Storybook files
+**/*.stories.ts
+**/*.stories.tsx
+.storybook/
+stories/
+
+# Development files
+apps/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build tools and configs
+vite.config.ts
+vitest.config.ts
+vitest.d.ts
+vitest.setup.ts
+tsconfig.json
+tsconfig.base.json
+.eslintrc*
+.prettierrc*
+.prettierignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (keep README.md)
+docs/
+*.md
+!README.md
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+*.sublime-project
+*.sublime-workspace
+
+# Misc
+.cache/
+.temp/
+tmp/
+coverage/
+.nyc_output/
+dist/coverage/
+
+# Husky
+.husky/
+
+# Lock files (keep pnpm-lock.yaml for workspace, but ignore in packages)
+package-lock.json
+yarn.lock
+
+# TypeScript build info
+*.tsbuildinfo
+

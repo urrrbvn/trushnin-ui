@@ -1,6 +1,6 @@
 {
   "name": "@trushnin-ui/tokens",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Design tokens for Trushnin UI",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

@@ -1,7 +1,7 @@
 {
   "name": "trushnin-ui",
-  "version": "0.1.0",
-  "description": "React UI Kit with TypeScript, CSS Modules, and tree-shaking support",
+  "version": "0.9.0-beta.0",
+  "description": "React UI Kit with TypeScript, CSS Modules, and tree-shaking support (Beta)",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -39,7 +39,11 @@
     "ui-kit",
     "typescript",
     "components",
-    "design-system"
+    "design-system",
+    "beta"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "tag": "beta"
+  }
 }

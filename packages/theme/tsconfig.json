@@ -6,5 +6,5 @@
     "types": ["node", "@testing-library/jest-dom"]
   },
   "include": ["src/**/*", "vitest.d.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]
 }
