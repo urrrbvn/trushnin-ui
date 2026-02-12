@@ -32,6 +32,7 @@ const config: StorybookConfig = {
       resolve: {
         alias: {
           '@trushnin-ui/tokens': path.resolve(dirname, '../packages/tokens/src'),
+          '@trushnin-ui/theme': path.resolve(dirname, '../packages/theme/src'),
         },
       },
     });
