@@ -1,2 +1,6 @@
-// Utility functions will be exported from here
-export {};
+/**
+ * Главный файл экспорта утилит
+ * Предоставляет доступ ко всем вспомогательным функциям
+ */
+
+export { className } from './className';

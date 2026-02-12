@@ -1,0 +1,12 @@
+/**
+ * Стили для компонента Icon
+ * Использует минимальные базовые стили, основная стилизация через CSS переменные
+ */
+
+/* Базовый компонент иконки */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
