@@ -1,0 +1,144 @@
+/**
+ * Стили для компонента Input
+ * Использует CSS переменные из токенов для цветов, отступов и размеров
+ */
+
+/* Обертка поля ввода */
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--trushnin-ui-spacing-1);
+}
+
+.inputWrapper--full-width {
+  width: 100%;
+}
+
+/* Метка поля */
+.inputLabel {
+  display: block;
+  margin-bottom: var(--trushnin-ui-spacing-1);
+}
+
+/* Контейнер поля ввода */
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--trushnin-ui-color-semantic-border-default);
+  border-radius: var(--trushnin-ui-border-radius-md);
+  background-color: var(--trushnin-ui-color-semantic-background-default);
+  transition: all var(--trushnin-ui-transition-default);
+}
+
+.inputContainer:hover:not(:disabled) {
+  border-color: var(--trushnin-ui-color-semantic-border-dark);
+}
+
+.inputContainer:focus-within {
+  border-color: var(--trushnin-ui-color-semantic-border-focus);
+  outline: 2px solid var(--trushnin-ui-color-semantic-primary-light);
+  outline-offset: -2px;
+}
+
+/* Состояние ошибки */
+.inputContainer--error {
+  border-color: var(--trushnin-ui-color-semantic-error-default);
+}
+
+.inputContainer--error:focus-within {
+  border-color: var(--trushnin-ui-color-semantic-error-default);
+  outline-color: var(--trushnin-ui-color-semantic-error-light);
+}
+
+/* Отключенное состояние */
+.inputContainer--disabled {
+  background-color: var(--trushnin-ui-color-semantic-background-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Размеры */
+.inputContainer--size-xs {
+  min-height: var(--trushnin-ui-size-height-xs);
+  padding: var(--trushnin-ui-spacing-1) var(--trushnin-ui-spacing-2);
+}
+
+.inputContainer--size-sm {
+  min-height: var(--trushnin-ui-size-height-sm);
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-3);
+}
+
+.inputContainer--size-md {
+  min-height: var(--trushnin-ui-size-height-md);
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-4);
+}
+
+.inputContainer--size-lg {
+  min-height: var(--trushnin-ui-size-height-lg);
+  padding: var(--trushnin-ui-spacing-3) var(--trushnin-ui-spacing-5);
+}
+
+.inputContainer--size-xl {
+  min-height: var(--trushnin-ui-size-height-xl);
+  padding: var(--trushnin-ui-spacing-4) var(--trushnin-ui-spacing-6);
+}
+
+/* Поле ввода с иконкой */
+.inputContainer--with-icon .input {
+  padding-left: calc(var(--trushnin-ui-spacing-4) + 1.5rem);
+}
+
+.inputContainer--with-icon-right .input {
+  padding-right: calc(var(--trushnin-ui-spacing-4) + 1.5rem);
+}
+
+/* Само поле ввода */
+.input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--trushnin-ui-color-semantic-text-primary);
+  font-family: var(--trushnin-ui-font-family-sans);
+  font-size: var(--trushnin-ui-font-size-base);
+  line-height: var(--trushnin-ui-line-height-normal);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--trushnin-ui-color-semantic-text-tertiary);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+/* Иконка слева */
+.inputIcon {
+  position: absolute;
+  left: var(--trushnin-ui-spacing-2);
+  display: flex;
+  align-items: center;
+  color: var(--trushnin-ui-color-semantic-text-tertiary);
+  pointer-events: none;
+}
+
+/* Иконка справа */
+.inputIconRight {
+  position: absolute;
+  right: var(--trushnin-ui-spacing-2);
+  display: flex;
+  align-items: center;
+  color: var(--trushnin-ui-color-semantic-text-tertiary);
+  pointer-events: none;
+}
+
+/* Вспомогательный текст */
+.inputHelperText {
+  margin-top: var(--trushnin-ui-spacing-1);
+}
+
+.inputHelperText--error {
+  color: var(--trushnin-ui-color-semantic-error-default);
+}

@@ -1,0 +1,174 @@
+/**
+ * Стили для компонента IconButton
+ * Использует CSS переменные из токенов для цветов, отступов и размеров
+ */
+
+/* Базовые стили кнопки-иконки */
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--trushnin-ui-border-radius-md);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--trushnin-ui-transition-default);
+  outline: none;
+  flex-shrink: 0;
+}
+
+/* Фокус состояние */
+.iconButton:focus-visible {
+  outline: 2px solid var(--trushnin-ui-color-semantic-border-focus);
+  outline-offset: 2px;
+}
+
+/* Вариант primary */
+.iconButton--variant-primary {
+  background-color: var(--trushnin-ui-color-semantic-primary-default);
+  color: white;
+}
+
+.iconButton--variant-primary:hover:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-primary-hover);
+}
+
+.iconButton--variant-primary:active:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-primary-active);
+}
+
+/* Вариант secondary */
+.iconButton--variant-secondary {
+  background-color: var(--trushnin-ui-color-semantic-secondary-default);
+  color: white;
+}
+
+.iconButton--variant-secondary:hover:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-secondary-hover);
+}
+
+.iconButton--variant-secondary:active:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-secondary-active);
+}
+
+/* Вариант outline */
+.iconButton--variant-outline {
+  background-color: transparent;
+  color: var(--trushnin-ui-color-semantic-primary-default);
+  border-color: var(--trushnin-ui-color-semantic-primary-default);
+}
+
+.iconButton--variant-outline:hover:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-primary-light);
+  color: var(--trushnin-ui-color-semantic-primary-hover);
+  border-color: var(--trushnin-ui-color-semantic-primary-hover);
+}
+
+.iconButton--variant-outline:active:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-primary-light);
+  color: var(--trushnin-ui-color-semantic-primary-active);
+  border-color: var(--trushnin-ui-color-semantic-primary-active);
+}
+
+/* Вариант ghost */
+.iconButton--variant-ghost {
+  background-color: transparent;
+  color: var(--trushnin-ui-color-semantic-text-primary);
+  border-color: transparent;
+}
+
+.iconButton--variant-ghost:hover:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-background-secondary);
+  color: var(--trushnin-ui-color-semantic-text-primary);
+}
+
+.iconButton--variant-ghost:active:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-background-tertiary);
+}
+
+/* Вариант danger */
+.iconButton--variant-danger {
+  background-color: var(--trushnin-ui-color-semantic-error-default);
+  color: white;
+}
+
+.iconButton--variant-danger:hover:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-error-hover);
+}
+
+.iconButton--variant-danger:active:not(:disabled) {
+  background-color: var(--trushnin-ui-color-semantic-error-active);
+}
+
+/* Размеры */
+.iconButton--size-xs {
+  width: var(--trushnin-ui-size-height-xs);
+  height: var(--trushnin-ui-size-height-xs);
+  padding: var(--trushnin-ui-spacing-1);
+}
+
+.iconButton--size-sm {
+  width: var(--trushnin-ui-size-height-sm);
+  height: var(--trushnin-ui-size-height-sm);
+  padding: var(--trushnin-ui-spacing-1);
+}
+
+.iconButton--size-md {
+  width: var(--trushnin-ui-size-height-md);
+  height: var(--trushnin-ui-size-height-md);
+  padding: var(--trushnin-ui-spacing-2);
+}
+
+.iconButton--size-lg {
+  width: var(--trushnin-ui-size-height-lg);
+  height: var(--trushnin-ui-size-height-lg);
+  padding: var(--trushnin-ui-spacing-2);
+}
+
+.iconButton--size-xl {
+  width: var(--trushnin-ui-size-height-xl);
+  height: var(--trushnin-ui-size-height-xl);
+  padding: var(--trushnin-ui-spacing-3);
+}
+
+/* Отключенное состояние */
+.iconButton--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Состояние загрузки */
+.iconButton--loading {
+  cursor: wait;
+}
+
+/* Спиннер загрузки */
+.iconButton__spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.iconButton__spinner-svg {
+  width: 60%;
+  height: 60%;
+  animation: spin 1s linear infinite;
+}
+
+.iconButton__spinner-circle {
+  fill: none;
+  stroke-width: 3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

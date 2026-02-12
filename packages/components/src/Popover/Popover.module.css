@@ -1,0 +1,129 @@
+/**
+ * Стили для компонента Popover
+ * Использует CSS переменные из токенов для цветов, отступов и размеров
+ */
+
+/* Базовые стили попапа */
+.popover {
+  padding: var(--trushnin-ui-spacing-4);
+  background-color: var(--trushnin-ui-color-semantic-background-default);
+  border: 1px solid var(--trushnin-ui-color-semantic-border-default);
+  border-radius: var(--trushnin-ui-border-radius-lg);
+  box-shadow: var(--trushnin-ui-shadow-lg);
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 400px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Стрелка попапа */
+.popover::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Позиция top */
+.popover--top::before {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-color: var(--trushnin-ui-color-semantic-background-default) transparent transparent
+    transparent;
+}
+
+.popover--top::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: var(--trushnin-ui-color-semantic-border-default) transparent transparent transparent;
+}
+
+/* Позиция bottom */
+.popover--bottom::before {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent var(--trushnin-ui-color-semantic-background-default)
+    transparent;
+}
+
+.popover--bottom::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent var(--trushnin-ui-color-semantic-border-default) transparent;
+}
+
+/* Позиция left */
+.popover--left::before {
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent
+    var(--trushnin-ui-color-semantic-background-default);
+}
+
+.popover--left::after {
+  content: '';
+  position: absolute;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent var(--trushnin-ui-color-semantic-border-default);
+}
+
+/* Позиция right */
+.popover--right::before {
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 8px 8px 0;
+  border-color: transparent var(--trushnin-ui-color-semantic-background-default) transparent
+    transparent;
+}
+
+.popover--right::after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent var(--trushnin-ui-color-semantic-border-default) transparent transparent;
+}

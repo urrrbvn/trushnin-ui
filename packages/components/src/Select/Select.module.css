@@ -1,0 +1,191 @@
+/**
+ * Стили для компонента Select
+ * Использует CSS переменные из токенов для цветов, отступов и размеров
+ */
+
+/* Обертка селекта */
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--trushnin-ui-spacing-1);
+}
+
+.selectWrapper--full-width {
+  width: 100%;
+}
+
+/* Метка селекта */
+.selectLabel {
+  display: block;
+  margin-bottom: var(--trushnin-ui-spacing-1);
+}
+
+/* Базовые стили селекта */
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--trushnin-ui-color-semantic-border-default);
+  border-radius: var(--trushnin-ui-border-radius-md);
+  background-color: var(--trushnin-ui-color-semantic-background-default);
+  cursor: pointer;
+  transition: all var(--trushnin-ui-transition-default);
+  outline: none;
+}
+
+.select:hover:not(:disabled) {
+  border-color: var(--trushnin-ui-color-semantic-border-dark);
+}
+
+.select:focus {
+  border-color: var(--trushnin-ui-color-semantic-border-focus);
+  outline: 2px solid var(--trushnin-ui-color-semantic-primary-light);
+  outline-offset: -2px;
+}
+
+.select--open {
+  border-color: var(--trushnin-ui-color-semantic-border-focus);
+  outline: 2px solid var(--trushnin-ui-color-semantic-primary-light);
+  outline-offset: -2px;
+}
+
+/* Состояние ошибки */
+.select--error {
+  border-color: var(--trushnin-ui-color-semantic-error-default);
+}
+
+.select--error:focus,
+.select--error.select--open {
+  border-color: var(--trushnin-ui-color-semantic-error-default);
+  outline-color: var(--trushnin-ui-color-semantic-error-light);
+}
+
+/* Отключенное состояние */
+.select--disabled {
+  background-color: var(--trushnin-ui-color-semantic-background-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Размеры */
+.select--size-xs {
+  min-height: var(--trushnin-ui-size-height-xs);
+  padding: var(--trushnin-ui-spacing-1) var(--trushnin-ui-spacing-2);
+}
+
+.select--size-sm {
+  min-height: var(--trushnin-ui-size-height-sm);
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-3);
+}
+
+.select--size-md {
+  min-height: var(--trushnin-ui-size-height-md);
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-4);
+}
+
+.select--size-lg {
+  min-height: var(--trushnin-ui-size-height-lg);
+  padding: var(--trushnin-ui-spacing-3) var(--trushnin-ui-spacing-5);
+}
+
+.select--size-xl {
+  min-height: var(--trushnin-ui-size-height-xl);
+  padding: var(--trushnin-ui-spacing-4) var(--trushnin-ui-spacing-6);
+}
+
+/* Значение селекта */
+.selectValue {
+  flex: 1;
+  color: var(--trushnin-ui-color-semantic-text-primary);
+  font-family: var(--trushnin-ui-font-family-sans);
+  font-size: var(--trushnin-ui-font-size-base);
+  line-height: var(--trushnin-ui-line-height-normal);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Placeholder */
+.selectPlaceholder {
+  color: var(--trushnin-ui-color-semantic-text-tertiary);
+}
+
+/* Иконка */
+.selectIcon {
+  flex-shrink: 0;
+  margin-left: var(--trushnin-ui-spacing-2);
+  color: var(--trushnin-ui-color-semantic-text-tertiary);
+  transition: transform var(--trushnin-ui-transition-default);
+}
+
+.selectIcon--open {
+  transform: rotate(180deg);
+}
+
+/* Выпадающий список */
+.selectDropdown {
+  padding: var(--trushnin-ui-spacing-1);
+  background-color: var(--trushnin-ui-color-semantic-background-default);
+  border: 1px solid var(--trushnin-ui-color-semantic-border-default);
+  border-radius: var(--trushnin-ui-border-radius-md);
+  box-shadow: var(--trushnin-ui-shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Опция в списке */
+.selectOption {
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-3);
+  color: var(--trushnin-ui-color-semantic-text-primary);
+  font-family: var(--trushnin-ui-font-family-sans);
+  font-size: var(--trushnin-ui-font-size-base);
+  line-height: var(--trushnin-ui-line-height-normal);
+  cursor: pointer;
+  border-radius: var(--trushnin-ui-border-radius-sm);
+  transition: background-color var(--trushnin-ui-transition-fast);
+  outline: none;
+}
+
+.selectOption:hover:not(.selectOption--disabled) {
+  background-color: var(--trushnin-ui-color-semantic-background-secondary);
+}
+
+.selectOption:focus:not(.selectOption--disabled) {
+  background-color: var(--trushnin-ui-color-semantic-background-secondary);
+  outline: 2px solid var(--trushnin-ui-color-semantic-border-focus);
+  outline-offset: -2px;
+}
+
+.selectOption--selected {
+  background-color: var(--trushnin-ui-color-semantic-primary-light);
+  color: var(--trushnin-ui-color-semantic-primary-default);
+  font-weight: var(--trushnin-ui-font-weight-medium);
+}
+
+.selectOption--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Вспомогательный текст */
+.selectHelperText {
+  margin-top: var(--trushnin-ui-spacing-1);
+}
+
+.selectHelperText--error {
+  color: var(--trushnin-ui-color-semantic-error-default);
+}

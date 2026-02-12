@@ -1,0 +1,66 @@
+/**
+ * Стили для компонента Tooltip
+ * Использует CSS переменные из токенов для цветов, отступов и размеров
+ */
+
+/* Базовые стили тултипа */
+.tooltip {
+  padding: var(--trushnin-ui-spacing-2) var(--trushnin-ui-spacing-3);
+  background-color: var(--trushnin-ui-color-gray-900);
+  color: white;
+  border-radius: var(--trushnin-ui-border-radius-md);
+  font-size: var(--trushnin-ui-font-size-sm);
+  line-height: var(--trushnin-ui-line-height-normal);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: var(--trushnin-ui-shadow-md);
+  z-index: 1000;
+  max-width: 200px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* Стрелка тултипа */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Позиция top */
+.tooltip--top::before {
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-color: var(--trushnin-ui-color-gray-900) transparent transparent transparent;
+}
+
+/* Позиция bottom */
+.tooltip--bottom::before {
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent var(--trushnin-ui-color-gray-900) transparent;
+}
+
+/* Позиция left */
+.tooltip--left::before {
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent var(--trushnin-ui-color-gray-900);
+}
+
+/* Позиция right */
+.tooltip--right::before {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent var(--trushnin-ui-color-gray-900) transparent transparent;
+}
