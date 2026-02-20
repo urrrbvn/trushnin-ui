@@ -7,7 +7,10 @@ const dirname =
   typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
-  stories: ['../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+  ],
   addons: [
     '@chromatic-com/storybook',
     '@storybook/addon-vitest',
@@ -34,6 +37,7 @@ const config: StorybookConfig = {
           '@trushnin-ui/tokens': path.resolve(dirname, '../packages/tokens/src'),
           '@trushnin-ui/theme': path.resolve(dirname, '../packages/theme/src'),
           '@trushnin-ui/primitives': path.resolve(dirname, '../packages/primitives/src'),
+          '@trushnin-ui/components': path.resolve(dirname, '../packages/components/src'),
           '@trushnin-ui/utils': path.resolve(dirname, '../packages/utils/src'),
         },
       },

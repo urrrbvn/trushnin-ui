@@ -11,8 +11,8 @@
     "url": "https://github.com/urrrbvn/trushnin-ui"
   },
   "scripts": {
-    "build": "pnpm -r --filter '@trushnin-ui/*' build",
-    "dev": "pnpm -r --filter '@trushnin-ui/*' dev",
+    "build": "pnpm -r --filter \"./packages/**\" build",
+    "dev": "pnpm -r --filter \"./packages/**\" dev",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "lint:fix": "pnpm -r lint:fix",
@@ -31,7 +31,6 @@
     "components",
     "design-system"
   ],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.1",

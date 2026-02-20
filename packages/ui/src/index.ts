@@ -10,6 +10,11 @@
  * ```
  */
 
+// Bundle all library styles into dist/style.css for `trushnin-ui/styles`.
+import '@trushnin-ui/tokens/tokens.css';
+import '@trushnin-ui/primitives/dist/style.css';
+import '@trushnin-ui/components/dist/style.css';
+
 // ============================================
 // Components - Стилизованные компоненты
 // ============================================
