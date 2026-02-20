@@ -1,6 +1,6 @@
 {
   "name": "trushnin-ui",
-  "version": "0.9.0-beta.0",
+  "version": "0.9.1",
   "description": "React UI Kit with TypeScript, CSS Modules, and tree-shaking support (Beta)",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -21,18 +21,19 @@
     "build": "vite build",
     "dev": "vite build --watch",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf dist"
-  },
-  "dependencies": {
-    "@trushnin-ui/tokens": "workspace:*",
-    "@trushnin-ui/theme": "workspace:*",
-    "@trushnin-ui/utils": "workspace:*",
-    "@trushnin-ui/primitives": "workspace:*",
-    "@trushnin-ui/components": "workspace:*"
+    "clean": "rm -rf dist",
+    "prepack": "pnpm -C ../.. build"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@trushnin-ui/components": "workspace:*",
+    "@trushnin-ui/primitives": "workspace:*",
+    "@trushnin-ui/theme": "workspace:*",
+    "@trushnin-ui/tokens": "workspace:*",
+    "@trushnin-ui/utils": "workspace:*"
   },
   "keywords": [
     "react",
@@ -43,6 +44,11 @@
     "beta"
   ],
   "license": "MIT",
+  "author": "urrrbvn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urrrbvn/trushnin-ui"
+  },
   "publishConfig": {
     "tag": "beta"
   }
